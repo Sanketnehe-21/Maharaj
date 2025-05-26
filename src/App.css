@@ -1,0 +1,65 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to right, orange, black);
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+  gap: 3vw;
+  text-align: center;
+}
+
+.image {
+  width: 30vw;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2vw;
+}
+
+.text {
+  color: white;
+  max-width: 60vw;
+  width: 100%;
+}
+
+.head {
+  background: linear-gradient(to right, orange, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(3vw, 5vw, 6vw); /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.white {
+  color: white;
+  font-size: clamp(2.5vw, 4vw, 5vw); /* Responsive font size */
+  font-weight: bolder;
+}
+
+/* Optional: adjust layout for very small screens */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 4vh 4vw;
+  }
+
+  .image {
+    width: 50vw;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+}
